@@ -12,5 +12,6 @@
 */
 
 Route::get('/', 'UrlController@index');
-Route::resource('urls', 'UrlController', ['except'=> ['index']]);
+Route::post('/urls/create', 'UrlController@create');
+Route::resource('urls', 'UrlController', ['except' => ['index']]);
 Route::get('/{url}', 'UrlController@visit');
